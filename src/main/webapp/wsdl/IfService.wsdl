@@ -18,6 +18,20 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
+   <element name="getState">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getStateResponse">
+    <complexType>
+     <sequence>
+      <element name="getStateReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
    <element name="getType">
     <complexType>
      <sequence>
@@ -58,6 +72,20 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     <complexType>
      <sequence>
       <element name="selectProductReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getNote">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getNoteResponse">
+    <complexType>
+     <sequence>
+      <element name="getNoteReturn" type="xsd:float"/>
      </sequence>
     </complexType>
    </element>
@@ -200,6 +228,14 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
+   <wsdl:message name="getNoteRequest">
+
+      <wsdl:part element="impl:getNote" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
    <wsdl:message name="getPriceRequest">
 
       <wsdl:part element="impl:getPrice" name="parameters">
@@ -211,6 +247,22 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <wsdl:message name="getTypeResponse">
 
       <wsdl:part element="impl:getTypeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNoteResponse">
+
+      <wsdl:part element="impl:getNoteResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStateRequest">
+
+      <wsdl:part element="impl:getState" name="parameters">
 
       </wsdl:part>
 
@@ -256,6 +308,14 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
+   <wsdl:message name="getStateResponse">
+
+      <wsdl:part element="impl:getStateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
    <wsdl:message name="selectProductResponse">
 
       <wsdl:part element="impl:selectProductResponse" name="parameters">
@@ -294,6 +354,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="getState">
+
+         <wsdl:input message="impl:getStateRequest" name="getStateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getStateResponse" name="getStateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="getType">
 
          <wsdl:input message="impl:getTypeRequest" name="getTypeRequest">
@@ -325,6 +397,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:selectProductResponse" name="selectProductResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNote">
+
+         <wsdl:input message="impl:getNoteRequest" name="getNoteRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getNoteResponse" name="getNoteResponse">
 
        </wsdl:output>
 
@@ -414,6 +498,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="getState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="getType">
 
          <wsdlsoap:operation soapAction=""/>
@@ -461,6 +563,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="selectProductResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNote">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getNoteRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getNoteResponse">
 
             <wsdlsoap:body use="literal"/>
 

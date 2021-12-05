@@ -23,6 +23,9 @@
       <operation name="getName" qname="operNS:getName" xmlns:operNS="http://ifService" returnQName="retNS:getNameReturn" xmlns:retNS="http://ifService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
         <parameter qname="pns:id" xmlns:pns="http://ifService" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
+      <operation name="getState" qname="operNS:getState" xmlns:operNS="http://ifService" returnQName="retNS:getStateReturn" xmlns:retNS="http://ifService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://ifService" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
       <operation name="getType" qname="operNS:getType" xmlns:operNS="http://ifService" returnQName="retNS:getTypeReturn" xmlns:retNS="http://ifService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
         <parameter qname="pns:id" xmlns:pns="http://ifService" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
@@ -32,6 +35,9 @@
       </operation>
       <operation name="selectProduct" qname="operNS:selectProduct" xmlns:operNS="http://ifService" returnQName="retNS:selectProductReturn" xmlns:retNS="http://ifService" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
         <parameter qname="pns:idProduct" xmlns:pns="http://ifService" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getNote" qname="operNS:getNote" xmlns:operNS="http://ifService" returnQName="retNS:getNoteReturn" xmlns:retNS="http://ifService" returnType="rtns:float" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://ifService" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
       <operation name="getPrice" qname="operNS:getPrice" xmlns:operNS="http://ifService" returnQName="retNS:getPriceReturn" xmlns:retNS="http://ifService" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
         <parameter qname="pns:id" xmlns:pns="http://ifService" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
@@ -53,7 +59,7 @@
       <operation name="balanceValue" qname="operNS:balanceValue" xmlns:operNS="http://ifService" returnQName="retNS:balanceValueReturn" xmlns:retNS="http://ifService" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
         <parameter qname="pns:id" xmlns:pns="http://ifService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
-      <parameter name="allowedMethods" value="buyProduct getName getType balanceValue login getAllProduct signUp getPrice selectProduct"/>
+      <parameter name="allowedMethods" value="buyProduct getName getState getType balanceValue getNote login getAllProduct signUp getPrice selectProduct"/>
 
   </service>
 </deployment>

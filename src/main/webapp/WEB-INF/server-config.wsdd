@@ -36,36 +36,42 @@
   <ns2:operation name="getName" qname="ns1:getName" returnQName="ns1:getNameReturn" returnType="xsd:string" soapAction="" xmlns:ns1="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
    <ns2:parameter qname="ns1:id" type="xsd:string"/>
   </ns2:operation>
-  <ns1:operation name="getType" qname="ns2:getType" returnQName="ns2:getTypeReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ns1:operation name="getState" qname="ns2:getState" returnQName="ns2:getStateReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <ns1:parameter qname="ns2:id" type="xsd:string"/>
   </ns1:operation>
-  <ns1:operation name="login" qname="ns3:login" returnQName="ns3:loginReturn" returnType="xsd:string" soapAction="" xmlns:ns3="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns3:id" type="xsd:int"/>
-   <ns1:parameter qname="ns3:password" type="xsd:string"/>
+  <ns1:operation name="getType" qname="ns3:getType" returnQName="ns3:getTypeReturn" returnType="xsd:string" soapAction="" xmlns:ns3="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns3:id" type="xsd:string"/>
   </ns1:operation>
-  <ns1:operation name="selectProduct" qname="ns4:selectProduct" returnQName="ns4:selectProductReturn" returnType="xsd:boolean" soapAction="" xmlns:ns4="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns4:idProduct" type="xsd:string"/>
+  <ns1:operation name="login" qname="ns4:login" returnQName="ns4:loginReturn" returnType="xsd:string" soapAction="" xmlns:ns4="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns4:id" type="xsd:int"/>
+   <ns1:parameter qname="ns4:password" type="xsd:string"/>
   </ns1:operation>
-  <ns1:operation name="getPrice" qname="ns5:getPrice" returnQName="ns5:getPriceReturn" returnType="xsd:double" soapAction="" xmlns:ns5="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns5:id" type="xsd:string"/>
-   <ns1:parameter qname="ns5:currency" type="xsd:string"/>
+  <ns1:operation name="selectProduct" qname="ns5:selectProduct" returnQName="ns5:selectProductReturn" returnType="xsd:boolean" soapAction="" xmlns:ns5="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns5:idProduct" type="xsd:string"/>
   </ns1:operation>
-  <ns1:operation name="signUp" qname="ns6:signUp" returnQName="ns6:signUpReturn" returnType="xsd:boolean" soapAction="" xmlns:ns6="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns6:id" type="xsd:int"/>
-   <ns1:parameter qname="ns6:password" type="xsd:string"/>
-   <ns1:parameter qname="ns6:firstName" type="xsd:string"/>
-   <ns1:parameter qname="ns6:lastName" type="xsd:string"/>
+  <ns1:operation name="getNote" qname="ns6:getNote" returnQName="ns6:getNoteReturn" returnType="xsd:float" soapAction="" xmlns:ns6="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns6:id" type="xsd:string"/>
   </ns1:operation>
-  <ns1:operation name="getAllProduct" qname="ns7:getAllProduct" returnQName="ns7:getAllProductReturn" returnType="xsd:string" soapAction="" xmlns:ns7="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
-  <ns1:operation name="buyProduct" qname="ns8:buyProduct" returnQName="ns8:buyProductReturn" returnType="xsd:boolean" soapAction="" xmlns:ns8="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns8:idProducts" type="xsd:string"/>
-   <ns1:parameter qname="ns8:price" type="xsd:double"/>
-   <ns1:parameter qname="ns8:idUser" type="xsd:int"/>
+  <ns1:operation name="getPrice" qname="ns7:getPrice" returnQName="ns7:getPriceReturn" returnType="xsd:double" soapAction="" xmlns:ns7="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns7:id" type="xsd:string"/>
+   <ns1:parameter qname="ns7:currency" type="xsd:string"/>
   </ns1:operation>
-  <ns1:operation name="balanceValue" qname="ns9:balanceValue" returnQName="ns9:balanceValueReturn" returnType="xsd:double" soapAction="" xmlns:ns9="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns9:id" type="xsd:int"/>
+  <ns1:operation name="signUp" qname="ns8:signUp" returnQName="ns8:signUpReturn" returnType="xsd:boolean" soapAction="" xmlns:ns8="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns8:id" type="xsd:int"/>
+   <ns1:parameter qname="ns8:password" type="xsd:string"/>
+   <ns1:parameter qname="ns8:firstName" type="xsd:string"/>
+   <ns1:parameter qname="ns8:lastName" type="xsd:string"/>
   </ns1:operation>
-  <ns1:parameter name="allowedMethods" value="buyProduct getName getType balanceValue login getAllProduct signUp getPrice selectProduct"/>
+  <ns1:operation name="getAllProduct" qname="ns9:getAllProduct" returnQName="ns9:getAllProductReturn" returnType="xsd:string" soapAction="" xmlns:ns9="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="buyProduct" qname="ns10:buyProduct" returnQName="ns10:buyProductReturn" returnType="xsd:boolean" soapAction="" xmlns:ns10="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns10:idProducts" type="xsd:string"/>
+   <ns1:parameter qname="ns10:price" type="xsd:double"/>
+   <ns1:parameter qname="ns10:idUser" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="balanceValue" qname="ns11:balanceValue" returnQName="ns11:balanceValueReturn" returnType="xsd:double" soapAction="" xmlns:ns11="http://ifService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns11:id" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="buyProduct getName getState getType balanceValue getNote login getAllProduct signUp getPrice selectProduct"/>
   <ns1:parameter name="scope" value="application"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="IfService"/>

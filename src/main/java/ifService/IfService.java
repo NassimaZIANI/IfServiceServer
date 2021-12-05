@@ -6,7 +6,6 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.xml.rpc.ServiceException;
@@ -105,6 +104,24 @@ public class IfService {
 			}
 		}
 		return price;
+	}
+	
+	public String getState(String id) throws RemoteException {
+		String state = null;
+		for(int i = 0; i < products.size(); i++) {
+			if(products.get(i).getId().equals(id))
+				state = products.get(i).getState();
+		}
+		return state;
+	}
+	
+	public float getNote(String id) throws RemoteException {
+		float note = -1;
+		for(int i = 0; i < products.size(); i++) {
+			if(products.get(i).getId().equals(id))
+				note = products.get(i).getNote();
+		}
+		return note;
 	}
 	
 	public boolean selectProduct(String idProduct) throws RemoteException {
